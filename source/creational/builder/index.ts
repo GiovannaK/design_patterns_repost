@@ -1,10 +1,5 @@
-import { MealBox } from './classes/meal-box';
-import { Beans, Meat, Rice } from './classes/meals';
+import { MainDishBuilder } from './classes/main-dish-builder';
 
-const rice = new Rice('Arroz', 5);
-const beans = new Beans('Feijão', 5);
-const meat = new Meat('Carne', 5);
-const mealBox = new MealBox();
-
-mealBox.add(rice, beans, meat);
-console.log(mealBox.getPrice());
+const mainDishBuilder = new MainDishBuilder();
+mainDishBuilder.makeMeal().makeBeverage().makeDessert();
+console.log(mainDishBuilder.getMeal());
